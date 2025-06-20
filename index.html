@@ -6,12 +6,13 @@
     <title>API Interaction Project</title>
 
 </head>
+<!--In the form tag, I made the onsubmit attribute "return false" so the page could stop refreshing-->
 <body>
     <h1>JSON API Explorer</h1>
     
     <section>
         <h2>Create New Post</h2>
-        <form id="postForm">
+        <form id="postForm" onsubmit="return false">
             <div>
                 <label for="titleInput">Title:</label>
                 <input type="text" id="titleInput" name="title" required>
@@ -20,7 +21,7 @@
                 <label for="bodyInput">Body:</label>
                 <textarea id="bodyInput" name="body" rows="4" required></textarea>
             </div>
-            <button type="submit">Submit Post</button>
+            <button id="submit-button" type="submit">Submit Post</button>
         </form>
         <div id="formError"></div>
         <div id="formSuccess"></div>
